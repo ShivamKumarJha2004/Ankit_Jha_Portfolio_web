@@ -263,11 +263,37 @@ body {
 
 @media (max-width:767px) {
     #hero img.brand-logo {
-        max-width: 45px;
-        margin-right: auto;
-        margin-left: 15px;
-        bottom: 171px
+        display: none !important;
     }
+    .mobile-logo-text {
+        display: block;
+        font-family: 'Sacramento', cursive;
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #fff;
+        background: linear-gradient(90deg, #ff7e28 40%, #fff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        text-align: center;
+        margin: 0 auto 18px auto;
+        letter-spacing: 2px;
+        text-shadow: 0 2px 12px #ff7e2820;
+        position: relative;
+        z-index: 2;
+        animation: fadeInLogo 1.2s;
+    }
+}
+@media (min-width: 768px) {
+    .mobile-logo-text {
+        display: none;
+    }
+}
+
+@keyframes fadeInLogo {
+    0% { opacity: 0; transform: translateY(-30px);}
+    100% { opacity: 1; transform: translateY(0);}
 }
 
 #hero span.hero-static {
@@ -1195,4 +1221,87 @@ h5 {
     padding: 10px 0;
     font-size: 5vw;
     font-family: Itim, cursive
+}
+
+@media (max-width: 767px) {
+    #hero {
+        min-height: 100vh;
+        padding: 40px 10px 30px 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #181a1b 80%, #ff7e28 100%);
+        position: relative;
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    }
+
+    #hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(21, 7, 52, 0.7);
+        z-index: 1;
+        border-radius: 0 0 40px 40px;
+    }
+
+    #hero h1,
+    #hero p {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        color: #fff;
+        text-shadow: 0 2px 8px #00000070;
+    }
+
+    #hero h1 {
+        font-size: 32px;
+        margin: 10px 0 15px 0;
+        letter-spacing: 2px;
+        font-family: 'Kalam', cursive;
+        font-weight: 700;
+    }
+
+    #hero p {
+        font-size: 22px;
+        margin-bottom: 30px;
+        font-family: 'Quicksand', sans-serif;
+    }
+
+    #hero p span {
+        color: #ff7e28;
+        font-weight: bold;
+        text-shadow: 0 2px 8px #00000050;
+    }
+
+    #hero .main-button {
+        position: relative;
+        z-index: 2;
+        background: linear-gradient(90deg, #ff7e28 60%, #ffb347 100%);
+        color: #181a1b;
+        border: none;
+        font-size: 17px;
+        font-weight: 700;
+        padding: 14px 38px;
+        border-radius: 30px;
+        box-shadow: 0 4px 16px #ff7e2840;
+        margin-top: 10px;
+        transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    }
+
+    #hero .main-button:hover {
+        background: #fff;
+        color: #ff7e28;
+        box-shadow: 0 6px 24px #ff7e2860;
+    }
+
+    #hero img.brand-logo {
+        display: block;
+        margin: 0 auto 18px auto;
+        max-width: 65px;
+        border-radius: 50%;
+        box-shadow: 0 2px 12px #ff7e2820;
+        position: relative;
+        z-index: 2;
+    }
 }
