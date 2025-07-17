@@ -907,7 +907,7 @@ a {
     position: relative;
     top: 11px;
     width: 240px;
-    color: white;
+    color: #d9d9d9
 }
 
 #contact-me .social-links hr.same-line {
@@ -916,6 +916,10 @@ a {
     top: 11px;
     width: 230px;
     color: #d9d9d9
+}
+
+#contact-me .address-info span {
+    color: #fff;
 }
 
 @media (max-width:530px) and (min-width:500px) {
